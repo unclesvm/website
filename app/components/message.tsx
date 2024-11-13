@@ -2,8 +2,7 @@
 import { useEffect, useRef } from 'react'
 import anime from 'animejs'
 
-export default function Message() {
-  const messages = ['Hi there, looking for dev?', 'Let me build your ideas']
+export default function Message({ messages }: { messages: string[] }) {
   const bubbles = useRef<HTMLDivElement[]>([])
   const text = useRef<HTMLParagraphElement[]>([])
   const dot = useRef<HTMLSpanElement[]>([])
@@ -76,35 +75,39 @@ export default function Message() {
     timeline.play()
   }, [bubbles, text, dot])
 
-  return messages.map((item, index) => (
-    <div
-      key={index}
-      ref={(el) => {
-        if (el) bubbles.current[index] = el
-      }}
-      className="bubble opacity-0 relative"
-    >
-      <p
-        ref={(el) => {
-          if (el) text.current[index] = el
-        }}
-        className="message text-white!"
-      >
-        {item}
-      </p>
-      <span
-        ref={(el) => {
-          if (el) dot.current[index] = el
-        }}
-        className="loading flex gap-1.5 sm:gap-2 absolute"
-      >
-        {[...Array(3)].map((_, i) => (
+  return (
+    <section className="flex flex-col gap-2 justify-end items-end w-full">
+      {messages.map((item, index) => (
+        <div
+          key={index}
+          ref={(el) => {
+            if (el) bubbles.current[index] = el
+          }}
+          className="bubble opacity-0 relative"
+        >
+          <p
+            ref={(el) => {
+              if (el) text.current[index] = el
+            }}
+            className="message text-white!"
+          >
+            {item}
+          </p>
           <span
-            key={i}
-            className="dot w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-black"
-          ></span>
-        ))}
-      </span>
-    </div>
-  ))
+            ref={(el) => {
+              if (el) dot.current[index] = el
+            }}
+            className="loading flex gap-1.5 sm:gap-2 absolute"
+          >
+            {[...Array(3)].map((_, i) => (
+              <span
+                key={i}
+                className="dot w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-black"
+              ></span>
+            ))}
+          </span>
+        </div>
+      ))}
+    </section>
+  )
 }
