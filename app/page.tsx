@@ -47,7 +47,7 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="max-w-2xl mx-auto h-[100dvh] flex flex-col justify-center items-center  gap-7 px-3 sm:px-5">
+    <main className="h-[100dvh] flex flex-col justify-center items-center  gap-7 px-3 sm:px-5">
       <section className="w-full flex justify-start items-center gap-4 sm:gap-6 ">
         <Image
           width="75"
