@@ -57,7 +57,7 @@ export default function Message({ messages }: { messages: string[] }) {
           targets: bubble,
           borderBottomRightRadius: ['0px', '9999px'],
           width: [loading.offsetWidth + 40, message.offsetWidth + 40],
-          height: [loading.offsetHeight + 20, message.offsetHeight + 10],
+          height: [loading.offsetHeight + 24, message.offsetHeight + 20],
           easing: 'easeOutSine',
           duration: 200,
           begin: function () {

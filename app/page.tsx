@@ -27,12 +27,12 @@ export default function Home() {
     },
     {
       label: 'Resume',
-      href: '/md/resume',
+      href: '/resume',
       icon: File,
     },
     {
-      label: 'hello@svm.engineer',
-      href: 'mailto:hello@svm.engineer',
+      label: 'Mail',
+      href: 'mailto:mailf@svm.engineer',
       icon: Mail,
     },
   ]
@@ -72,19 +72,20 @@ export default function Home() {
         life. I guide products from concept to launch with a thoughtful,
         hands-on approach.
       </section>
-      <section className="w-full flex flex-col lg:flex-row gap-2 flex-wrap mt-4 ">
+
+      <section className="w-full flex flex-col lg:flex-row gap-2 flex-wrap ">
         {links.map((link) => (
           <Link
             key={link.href}
             href={link.href}
-            className="flex justify-between items-centers gap-2 bg-neutral-700/55 hover:bg-neutral-700/90 max-w-min text-sm p-6 py-1.5 rounded shadow transition"
+            className="flex justify-between items-center gap-2 bg-neutral-700/55 hover:bg-neutral-700/90 max-w-min text-sm p-6 py-1.5 rounded shadow transition"
           >
             <link.icon size={16} />
             {link.label}
           </Link>
         ))}
-        <Message {...{ messages }} />
       </section>
+      <Message {...{ messages }} />
     </main>
   )
 }
