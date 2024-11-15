@@ -1,11 +1,9 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
 import Message from './components/message'
 import { useEffect } from 'react'
 import anime from 'animejs'
-import { siFiles, siGithub, siLinkedin, siMailgun } from 'simple-icons'
 import Socials from './components/socials'
 
 export default function Home() {
