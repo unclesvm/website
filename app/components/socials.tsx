@@ -19,7 +19,7 @@ const links = [
   },
   {
     label: 'Mail',
-    href: 'mailto:mailf@svm.engineer',
+    href: 'mailto:mail@svm.engineer',
     icon: siMailgun,
   },
 ]
