@@ -1,6 +1,6 @@
 'use client'
-import { useEffect, useRef } from 'react'
 import anime from 'animejs'
+import { useEffect, useRef } from 'react'
 import { poppins } from '../fonts'
 
 export default function Message({ messages }: { messages: string[] }) {
@@ -88,7 +88,7 @@ export default function Message({ messages }: { messages: string[] }) {
           ref={(el) => {
             if (el) bubbles.current[index] = el
           }}
-          className="opacity-0 relative px-3 sm:px-5 py-1.5 sm:py-3 flex justify-center items-center gap-3 w-min  text-white bg-white dark:bg-stone-200 rounded-tr-full rounded-l-full text-center tracking-wider whitespace-pre shadow"
+          className="opacity-0 relative px-3 sm:px-5 py-1.5 sm:py-3 flex justify-start items-center gap-3 w-min  text-white bg-white dark:bg-stone-200 rounded-tr-full rounded-l-full text-center tracking-wider whitespace-pre shadow"
         >
           <p
             ref={(el) => {

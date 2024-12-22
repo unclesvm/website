@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { siGithub, siLinkedin, siFiles, siMailgun } from 'simple-icons'
+import { siFiles, siGithub, siLinkedin, siMailgun } from 'simple-icons'
 
 const links = [
   {
@@ -31,7 +31,7 @@ export default function Socials() {
         <Link
           key={link.href}
           href={link.href}
-          className="min-w-full flex justify-center items-center gap-2 p-6 py-2 text-sm rounded shadow transition  bg-neutral-700/55 hover:bg-neutral-700/90"
+          className="min-w-full flex justify-center items-center gap-2 p-6 py-2 text-sm rounded shadow transition duration-300 bg-neutral-700/55 hover:bg-neutral-100 hover:text-black"
         >
           <svg
             role="img"

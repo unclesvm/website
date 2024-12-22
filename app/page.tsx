@@ -1,16 +1,16 @@
 'use client'
 
-import Image from 'next/image'
-import Message from './components/message'
-import { useEffect } from 'react'
 import anime from 'animejs'
+import Image from 'next/image'
+import { useEffect } from 'react'
+import Message from './components/message'
 import Socials from './components/socials'
 
 export default function Home() {
   const messages = [
-    'Hi there, looking for dev?',
-    'Let me build your ideas',
-    'Send message, I will respond asap',
+    'Hi, do you need dev?',
+    'I can build your ideas',
+    'Lets get in touch 🤙',
   ]
 
   useEffect(() => {
@@ -30,7 +30,7 @@ export default function Home() {
           height="75"
           src="/memoji-wink.png"
           alt="Cartoon-style picuter of me"
-          className="bg-white/20 shadow-lg rounded-full max-w-16 md:max-w-20"
+          className="bg-neutral-800 shadow-lg rounded-full max-w-16 md:max-w-20"
         />
 
         <header>

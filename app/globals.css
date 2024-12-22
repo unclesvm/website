@@ -10,7 +10,7 @@ body {
 }
 
 body::before {
-  --line: color-mix(in lch, canvasText 50%, transparent);
+  --line: color-mix(in lch, canvasText 90%, white);
   --size: 40px;
   content: '';
   height: 100vh;
@@ -22,7 +22,7 @@ body::before {
     linear-gradient(var(--line) 1px, transparent 1px var(--size)) 0 -5vmin / var(
         --size
       ) var(--size);
-  mask: linear-gradient(-15deg, transparent 60%, white);
+  mask: linear-gradient(-15deg, transparent 50%, white);
   top: 0;
   z-index: -1;
 }
