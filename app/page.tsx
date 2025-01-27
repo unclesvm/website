@@ -3,8 +3,8 @@
 import anime from 'animejs'
 import Image from 'next/image'
 import { useEffect } from 'react'
-import Message from './components/message'
-import Socials from './components/socials'
+import Message from './components/Message'
+import Socials from './components/Socials'
 
 export default function Home() {
   const messages = [

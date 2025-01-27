@@ -1,4 +1,4 @@
-import Icon from "./icon"
+import SimpleIcon from "./SimpleIcon"
 
 const content = {
   "Programming languages": ["css", "html5", "javascript", "typescript", "python"],
@@ -15,7 +15,7 @@ export default function Skills() {
           {key}
             <div className="flex justify-start items-center h-10 uppercase gap-8">
               {value.map((name) =>
-                <Icon key={name} name={name} showLabel />
+                <SimpleIcon key={name} name={name} showLabel />
               )}
             </div>
         </div>
