@@ -21,13 +21,15 @@ const content = {
 export default function ContactLinks() {
   return (
     <pre>
-      <div><span className="text-red-500">const</span> contact = {"{"} </div>
+      <div className="text-neutral-800 dark:text-neutral-300">
+        <span className="text-red-600 dark:text-red-500">const</span> contact = {"{"}
       {Object.entries(content).map(([key, value]) => (
         <div key={key}>
-          <span className="text-cyan-500">  {key}</span>: <a href={value.href} className="text-emerald-500">{value.label}</a>,
+          <span className="text-cyan-600 dark:text-cyan-500">  {key}</span>: <a href={value.href} className="dark:text-emerald-500 text-green-700">{value.label}</a>,
         </div>
       ))}
-      <div>{"}"}</div>
+      {"}"}
+    </div>
     </pre>
 
   )
