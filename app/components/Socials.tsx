@@ -19,7 +19,7 @@ const links = [
   },
   {
     label: 'Mail',
-    href: 'mailto:mail@svm.engineer',
+    href: 'mailto:samuel.kaminski@icloud.com',
     icon: siMailgun,
   },
 ]

@@ -5,8 +5,8 @@ const content = {
       href: "https://svm.engineer"
     },
     email: {
-      label: "mail@svm.engineer",
-      href: "mailto:mail@svm.engineer"
+      label: "samuel.kaminski@icloud.com",
+      href: "mailto:samuel.kaminski@icloud.com"
     },
     github: {
       label: "shadsvm",
