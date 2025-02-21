@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from 'next'
 import { roboto_mono } from './fonts'
 import './globals.css'
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body className={roboto_mono.className}>
         <div className="max-w-2xl mx-auto dark:text-neutral-200 ">
           {children}
+          <Analytics />
         </div>
       </body>
     </html>
