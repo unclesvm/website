@@ -4,7 +4,7 @@ import { siFiles, siGithub, siLinkedin, siMailgun } from 'simple-icons'
 const links = [
   {
     label: 'Github',
-    href: 'https://github.com/shadsvm',
+    href: 'https://github.com/unclesvm',
     icon: siGithub,
   },
   {

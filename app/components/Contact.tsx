@@ -9,8 +9,8 @@ const content = {
       href: "mailto:samuel.kaminski@icloud.com"
     },
     github: {
-      label: "shadsvm",
-      href: "https://github.com/shadsvm"
+      label: "unclesvm",
+      href: "https://github.com/unclesvm"
     },
     linkedin: {
       label: "sam-kmn",
