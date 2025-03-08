@@ -1,20 +1,20 @@
 
 const content = {
-    website: {
-      label: "svm.engineer",
-      href: "https://svm.engineer"
-    },
     email: {
       label: "samuel.kaminski@icloud.com",
       href: "mailto:samuel.kaminski@icloud.com"
     },
-    github: {
-      label: "unclesvm",
-      href: "https://github.com/unclesvm"
+    website: {
+      label: "svm.engineer",
+      href: "https://svm.engineer"
     },
     linkedin: {
       label: "sam-kmn",
       href: "https://linkedin.com/in/sam-kmn"
+    },
+    github: {
+      label: "unclesvm",
+      href: "https://github.com/unclesvm"
     },
 }
 
