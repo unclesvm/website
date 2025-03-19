@@ -1,8 +1,14 @@
+import { ComponentPropsWithoutRef } from "react"
 
 const content = {
+
     email: {
       label: "samuel.kaminski@icloud.com",
       href: "mailto:samuel.kaminski@icloud.com"
+    },
+    phone: {
+      label: "(+48) 530 643 361",
+      href: "telto:+48530643361"
     },
     website: {
       label: "svm.engineer",
@@ -18,14 +24,14 @@ const content = {
     },
 }
 
-export default function ContactLinks() {
+export default function ContactLinks(props: ComponentPropsWithoutRef<'pre'>) {
   return (
-    <pre>
-      <div className="text-neutral-800 dark:text-neutral-300">
-        <span className="text-red-600 dark:text-red-500">const</span> contact = {"{"}
+    <pre {...props}>
+      <div className="text-neutral-800 dark:text-neutral-300 text-xs">
+        <span className="text-red-800 dark:text-red-500">const</span> contact = {"{"}
       {Object.entries(content).map(([key, value]) => (
         <div key={key}>
-          <span className="text-cyan-600 dark:text-cyan-500">  {key}</span>: <a href={value.href} className="dark:text-emerald-500 text-green-700">{value.label}</a>,
+          <span className="text-cyan-700 dark:text-cyan-500">  {key}</span>: <a href={value.href} className="dark:text-emerald-500 text-indigo-700">{value.label}</a>,
         </div>
       ))}
       {"}"}

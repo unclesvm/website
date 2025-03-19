@@ -1,12 +1,13 @@
 import { Icon } from '@iconify/react';
+import { ComponentPropsWithoutRef } from 'react';
 
 const content = [
   [
     {name: "Languages"},
     {name: 'html5', label: 'html'},
     {name: 'css'},
-    {name: 'javascript'},
-    {name: 'typescript'},
+    {name: 'javascript', label:'JS'},
+    {name: 'typescript', label:'TS'},
     {name: 'python'},
     {name: 'json'},
   ],
@@ -19,13 +20,11 @@ const content = [
     {name: 'nextdotjs', label: 'next'},
     {name: 'react'},
     {name: 'astro'},
-    {name: 'hono'},
   ],
   [
-    {name: "Tools"},
+    {name: "Libraries"},
     {name: 'git'},
     {name: 'zod'},
-    {name: 'figma'},
     {name: 'redux'},
     {name: 'docker'},
     {name: 'prisma'},
@@ -33,27 +32,35 @@ const content = [
     {name: 'tailwindcss', label: 'tailwind'},
   ],
   [
-    {name: "DB & Hosting"},
+    {name: "Database"},
     {name: 'vercel'},
     {name: 'redis'},
     {name: 'railway'},
     {name: 'mongodb'},
     {name: 'firebase'},
-    {name: 'postgresql'},
-    {name: 'planetscale'},
-
+    {name: 'postgresql', label:'postgre'},
+    {name: 'sqlite'},
   ],
 ]
 
-export default function Skills() {
+export default function Skills(props: ComponentPropsWithoutRef<'div'>) {
   return (
-    <div className="flex border border-neutral-600 dark:border-neutral-500 rounded divide-x overflow-hidden">
+    <div {...props} className="flex overflow-hidden w-min h-min">
       {content.map((entry, index) => (
-        <div key={index + entry.toString()} className=" flex flex-col justify-start divide-neutral-200 dark:divide-neutral-800 divide-y items-start  uppercase  border-neutral-200 dark:border-neutral-700 max-w-xs w-full">
+        <div
+          key={index + entry.toString()}
+          className="flex flex-col justify-start items-start max-w-xs uppercase border-l border-neutral-300 *:border-neutral-300 dark:border-neutral-800 dark:*:border-neutral-800"
+        >
           {Object.values(entry).map(({name, label}) =>
-            <div key={name} className='first:bg-neutral-300 dark:first:bg-neutral-900 first:font-bold first:text-sm tracking-wide text-xs w-full flex justify-start items-center !p-3 gap-2 '>
-              <Icon icon={'simple-icons:' + name} className='w-3 h-3' />
-              <div className=''>{label || name}</div>
+            <div
+              key={name}
+              className='w-full flex justify-start items-center p-1 px-2 gap-1.5 first:bg-neutral-200 dark:first:bg-neutral-900 first:font-bold border-b last:border-0'
+            >
+              <Icon
+                icon={'simple-icons:' + name}
+                className='group-first:hidden w-2.5 h-2.5'
+              />
+              <div className='text-[8px] w-full'>{label || name}</div>
             </div>
           )}
         </div>

@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto_mono.className}>
-        <div className="max-w-2xl mx-auto dark:text-neutral-200 ">
+        <div className="max-w-2xl lg:max-w-3xl mx-auto dark:text-neutral-200 ">
           {children}
           <Analytics />
         </div>
