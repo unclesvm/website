@@ -10,6 +10,7 @@ const content = [
     {name: 'typescript', label:'TS'},
     {name: 'python'},
     {name: 'json'},
+    {name: ''},
   ],
   [
     {name: "Frameworks"},
@@ -45,16 +46,16 @@ const content = [
 
 export default function Skills(props: ComponentPropsWithoutRef<'div'>) {
   return (
-    <div {...props} className="flex overflow-hidden w-min h-min">
+    <div {...props} className="flex overflow-hidden w-full md:w-fit h-full border-t sm:border-t-0 sm:border-l border-neutral-700">
       {content.map((entry, index) => (
         <div
           key={index + entry.toString()}
-          className="flex flex-col justify-start items-start max-w-xs uppercase border-l border-neutral-300 *:border-neutral-300 dark:border-neutral-800 dark:*:border-neutral-800"
+          className="w-full flex flex-col justify-start items-start max-w-xs uppercase  border-neutral-300 *:border-neutral-300 dark:border-neutral-800 dark:*:border-neutral-800"
         >
           {Object.values(entry).map(({name, label}) =>
             <div
               key={name}
-              className='w-full flex justify-start items-center p-1 px-2 gap-1.5 first:bg-neutral-200 dark:first:bg-neutral-900 first:font-bold border-b last:border-0'
+              className='w-full flex justify-start items-center p-1 px-2 gap-1.5 first:font-bold border-b last:border-0'
             >
               <Icon
                 icon={'simple-icons:' + name}
