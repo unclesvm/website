@@ -67,14 +67,14 @@ export default function ResumePage() {
                 <h2 className="text-lg font-bold w-full">{item.company}</h2>
                 <h4 className="font-sans">{item.position}</h4>
               </header>
-              <h4 className="dark:text-neutral-200 text-neutral-800 text-sm font-sans">
+              <h4 className="text-sm font-sans">
                 {item.period}
               </h4>
             </div>
             <p className="leading-4 text-[9px] text-justify font-sans ">
               {item.description}
             </p>
-            <div className="flex gap-2 flex-wrap lowercase font-sans text-[9px] text-justify text-neutral-500">
+            <div className="flex gap-2 flex-wrap lowercase font-sans text-[9px] text-justify text-neutral-300 dark:text-neutral-500">
               {"// " + item.techStack.join(', ')}
             </div>
           </li>
